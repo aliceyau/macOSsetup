@@ -104,6 +104,6 @@ warning: /opt/homebrew/bin is not in your PATH
 
 That's okay. We address this in the "Update The Terminal" Section. 
 
-<<STILL UNDER CONSTRUCTION>>
+**STILL UNDER CONSTRUCTION**
 
 
