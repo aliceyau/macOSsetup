@@ -78,3 +78,15 @@ echo $PATHS
 You may see something like:
 <img width="520" alt="image" src="https://user-images.githubusercontent.com/19870859/202088798-219982d5-1b3c-45ba-8937-624dbbc170f6.png">
 
+Where does the OS pull this from?
+It typically pulls paths from these guys (This is different if your shell is bash, fish, etc):
+
+~/.zshrc
+/etc/paths
+/etc/paths.d  
+/etc/profile 
+
+
+
+
+~/.zprofile \n~/.zshrc \n~/.bash_profile \n/etc/paths \n/etc/paths.d \n/etc/profile'"
