@@ -78,7 +78,7 @@ echo $PATHS
 you should see what directories your terminal looks through for binaries, links, etc, **in order** of what it looks through first, from left to right. 
 
 Where does the OS pull this from?
-It typically pulls paths from these guys (This is different if your shell is bash (~/.bashrc), fish (~/fish/config.fish), etc):
+It typically pulls paths from these guys (This is different if your shell is bash ( ~/.bashrc ), fish ( ~/fish/config.fish ), etc):
 - ~/.zshrc
 - /etc/paths
 - /etc/paths.d  
