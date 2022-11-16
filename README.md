@@ -25,6 +25,7 @@ This is pretty specific for myself, however if it's helpful for you, feel free t
 - [Elasticsearch](#elasticsearch)
 - [Projects folder](#projects-folder)
 - [Apps](#apps)
+- Update the Terminal
 
 ## Update Script
 First thing I do is automate any updating via a bash/zsh script, that I call "updateMe.sh"
@@ -78,10 +79,31 @@ you should see what directories your terminal looks through for binaries, links,
 
 Where does the OS pull this from?
 It typically pulls paths from these guys (This is different if your shell is bash (~/.bashrc), fish (~/fish/config.fish), etc):
+- ~/.zshrc
+- /etc/paths
+- /etc/paths.d  
+- /etc/profile 
 
-~/.zshrc
-/etc/paths
-/etc/paths.d  
-/etc/profile 
+TODO: update the terminal here
+
+
+## Homebrew
+Homebrew is probably the most popular package manager for MacOs. 
+We need to install the Command Line Developer Tools for Xcode first. You do not need Xcode to use Homebrew, however some of the software and components you'll want to install will rely on Xcode's Command Line Tools package
+```
+xcode-select --install
+```
+Then install homebrew, you can find the command on Homebrew's webpage or below:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+You may see a warning:
+
+warning: /opt/homebrew/bin is not in your PATH
+
+That's okay. We address this in the "Update The Terminal" Section. 
+
+<<STILL UNDER CONSTRUCTION>>
 
 
