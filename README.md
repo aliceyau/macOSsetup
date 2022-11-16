@@ -11,8 +11,7 @@ This is pretty specific for myself, however if it's helpful for you, feel free t
 
 - [Automatic Updates](#update-script)
 - [System Settings](#system-settings)
-- [Security](#security)
-- [iTerm2](#iterm2)
+- [The Terminal](#the-terminal)
 - [Homebrew](#homebrew)
 - [Git](#git)
 - [Visual Studio Code](#visual-studio-code)
@@ -65,3 +64,17 @@ Obviously we want to customize the system to our liking. Again, these are specif
 - Privacy & Security -> File Vault -> Turned on
 - AppleID -> FindMy -> Find My mac -> Turned on
 - Lock Screen -> Require Password after screen saver begins or when display turns off -> Immediately
+
+
+## The Terminal
+Ever since apple switched the default shell to zsh instead of bash, I found it's unnecessary to install iTerm/iTerm2. The terminal naturally defaults to the zsh shell, but if you want to switch to bash, there are plenty of articles on google that show you how. I like zsh, so we'll run with it. 
+
+First things first, we should understand where our paths are. 
+
+```
+echo $PATHS
+```
+
+You may see something like:
+<img width="520" alt="image" src="https://user-images.githubusercontent.com/19870859/202088798-219982d5-1b3c-45ba-8937-624dbbc170f6.png">
+
