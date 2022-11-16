@@ -5,11 +5,12 @@ This repo will describe how I set up my dev environment on a Mac.
 My specs:
  - Macbook Pro 14" 
  - M1 chip, Apple Silicon, Arm-based architecture
+ - MacOS Ventura 13.0.1
 
 This is pretty specific for myself, however if it's helpful for you, feel free to follow along. 
 
 - [Automatic Updates](#update-script)
-- [System preferences](#system-preferences)
+- [System Settings](#system-settings)
 - [Security](#security)
 - [iTerm2](#iterm2)
 - [Homebrew](#homebrew)
@@ -49,3 +50,18 @@ exit 0
 
 ```
 Update your mac if you see that there are updates. 
+
+
+## System Settings
+Obviously we want to customize the system to our liking. Again, these are specific to me. Feel free to ignore this section.
+
+- Notifications -> Remove all notifications except for Mail, Messages, FaceTime, Reminders, Calendar, FindMy, and Wallet
+- Trackpad -> Tracking Speed -> Fast
+- Trackpad -> Click -> Light
+- Trackpad -> Secondary Click -> Bottom Right Corner
+- Trackpad -> Tap to click -> Enabled
+- Keyboard -> Key Repeat Rate -> fast
+- Keyboard -> Delay until repeat -> Short
+- Privacy & Security -> File Vault -> Turned on
+- AppleID -> FindMy -> Find My mac -> Turned on
+- Lock Screen -> Require Password after screen saver begins or when display turns off -> Immediately
