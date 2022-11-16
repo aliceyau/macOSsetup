@@ -8,7 +8,7 @@ My specs:
 
 This is pretty specific for myself, however if it's helpful for you, feel free to follow along. 
 
-- [System update](#system-update)
+- [Automatic Updates](#update-script)
 - [System preferences](#system-preferences)
 - [Security](#security)
 - [iTerm2](#iterm2)
@@ -36,7 +36,7 @@ mkdir myScripts && cd myScripts
 vim updateMe.sh
 ```
 
-Inside this script I set up a script that runs through checking for updates for different things. For now, just need:
+Inside this script I set up a script that runs through checking for updates for different things. For now, I just need:
 
 ```
 #!/bin/zsh
@@ -48,4 +48,4 @@ echo '1) checking Apple Updates'
 exit 0
 
 ```
-
+Update your mac if you see that there are updates. 
