@@ -93,18 +93,18 @@ brew doctor
 This is the list of all packages installed on my Mac, currently:
 <img width="1343" alt="image" src="https://user-images.githubusercontent.com/19870859/202926967-91b16bb8-d6b9-4147-bc26-1f4564a49c6d.png">
 
-# apr and apr-util
+### apr and apr-util
 Apache Portable Runtime (base portability library)
 Apache Portable Runtime - Utilities (APR-util provides a number of helpful abstractions on top of APR)
 These are dependencies required by some apps. 
 
-# autoconf
+### autoconf
 Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages. These scripts can adapt the packages to many kinds of UNIX-like systems without manual user intervention.
 
-# ca-certificates
+### ca-certificates
 A certificate authority (CA) is a trusted entity that issues Secure Sockets Layer (SSL) certificates. These digital certificates are data files used to cryptographically link an entity with a public key. Web browsers use them to authenticate content sent from web servers, ensuring trust in content delivered online. This package holds the updated versions of the ca-certificates that are common to everyone. It simplifies the process of downloading certificates and importing them manually. When you install the ca-certificates package, you also get an updater. You can run it manually or add it to a cron job
 
-# cairo 
+### cairo 
 R graphics device using cairographics library that can be used to create high-quality vector (PDF, PostScript and SVG) and bitmap output (PNG,JPEG,TIFF), and high-quality rendering in displays (X11 and Win32). 
 
 
