@@ -11,8 +11,8 @@ This is pretty specific for myself, however if it's helpful for you, feel free t
 
 - [Automatic Updates](#update-script)
 - [System Settings](#system-settings)
-- [The Terminal](#the-terminal)
 - [Homebrew](#homebrew)
+- [Updating The Terminal](#update-the-terminal)
 - [Git](#git)
 - [Visual Studio Code](#visual-studio-code)
 - [Vim](#vim)
@@ -67,26 +67,6 @@ Obviously we want to customize the system to our liking. Again, these are specif
 - Lock Screen -> Require Password after screen saver begins or when display turns off -> Immediately
 
 
-## The Terminal
-Ever since apple switched the default shell to zsh instead of bash, I found it's unnecessary to install iTerm/iTerm2. The terminal naturally defaults to the zsh shell, but if you want to switch to bash, there are plenty of articles on google that show you how. I like zsh, so we'll run with it. 
-
-First things first, we should understand where our paths are. 
-
-```
-echo $PATHS
-```
-you should see what directories your terminal looks through for binaries, links, etc, **in order** of what it looks through first, from left to right. 
-
-Where does the OS pull this from?
-It typically pulls paths from these guys (This is different if your shell is bash ( ~/.bashrc ), fish ( ~/fish/config.fish ), etc):
-- ~/.zshrc
-- /etc/paths
-- /etc/paths.d  
-- /etc/profile 
-
-TODO: update the terminal here
-
-
 ## Homebrew
 Homebrew is probably the most popular package manager for MacOs. 
 We need to install the Command Line Developer Tools for Xcode first. You do not need Xcode to use Homebrew, however some of the software and components you'll want to install will rely on Xcode's Command Line Tools package
@@ -104,6 +84,50 @@ warning: /opt/homebrew/bin is not in your PATH
 
 That's okay. We address this in the "Update The Terminal" Section. 
 
+Once installation is complete, you can run the following command to make sure everything works:
+
+```
+brew doctor
+```
+
+This is the list of all packages installed on my Mac, currently:
+<img width="1343" alt="image" src="https://user-images.githubusercontent.com/19870859/202926967-91b16bb8-d6b9-4147-bc26-1f4564a49c6d.png">
+
+# apr and apr-util
+Apache Portable Runtime (base portability library)
+Apache Portable Runtime - Utilities (APR-util provides a number of helpful abstractions on top of APR)
+These are dependencies required by some apps. 
+
+# autoconf
+Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages. These scripts can adapt the packages to many kinds of UNIX-like systems without manual user intervention.
+
+# ca-certificates
+A certificate authority (CA) is a trusted entity that issues Secure Sockets Layer (SSL) certificates. These digital certificates are data files used to cryptographically link an entity with a public key. Web browsers use them to authenticate content sent from web servers, ensuring trust in content delivered online. This package holds the updated versions of the ca-certificates that are common to everyone. It simplifies the process of downloading certificates and importing them manually. When you install the ca-certificates package, you also get an updater. You can run it manually or add it to a cron job
+
+# cairo 
+R graphics device using cairographics library that can be used to create high-quality vector (PDF, PostScript and SVG) and bitmap output (PNG,JPEG,TIFF), and high-quality rendering in displays (X11 and Win32). 
+
+
+
 **STILL UNDER CONSTRUCTION**
 
 
+
+## Update The Terminal
+Ever since apple switched the default shell to zsh instead of bash, I found it's unnecessary to install iTerm/iTerm2. The terminal naturally defaults to the zsh shell, but if you want to switch to bash, there are plenty of articles on google that show you how. I like zsh, so we'll run with it. 
+
+First things first, we should understand where our paths are. 
+
+```
+echo $PATHS
+```
+you should see what directories your terminal looks through for binaries, links, etc, **in order** of what it looks through first, from left to right. I like to familiarize myself with this list. 
+
+Where does the OS pull this from?
+It typically pulls paths from these guys (This is different if your shell is bash ( ~/.bashrc ), fish ( ~/fish/config.fish ), etc):
+- ~/.zshrc
+- /etc/paths
+- /etc/paths.d  
+- /etc/profile 
+
+For now
