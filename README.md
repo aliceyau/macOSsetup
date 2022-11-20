@@ -12,7 +12,7 @@ This is pretty specific for myself, however if it's helpful for you, feel free t
 - [Automatic Updates](#update-script)
 - [System Settings](#system-settings)
 - [Homebrew](#homebrew)
-- [Oh My Zsh] (#install-oh-my-zsh)
+- [Oh My Zsh](#install-oh-my-zsh)
 - [Updating The Terminal](#update-the-terminal)
 - [Git](#git)
 - [Visual Studio Code](#visual-studio-code)
