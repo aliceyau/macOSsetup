@@ -94,13 +94,28 @@ brew doctor
 This is the list of all packages installed on my Mac, currently:
 <img width="1343" alt="image" src="https://user-images.githubusercontent.com/19870859/202926967-91b16bb8-d6b9-4147-bc26-1f4564a49c6d.png">
 
+I add the following to my updateMe.sh script
+```
+echo '2) HOMEBREW '
+brew update
+brew upgrade
+brew cleanup
+```
+
+
 
 ## Install Oh My Zsh
-
+Oh my zsh is an open source framework to manage our Zsh shell configuration - it has some nice plug ins and themes. If you are using any other shell (bash/fish/etc) please skip this. 
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+I add the following to my updater script:
 
+```
+echo '3) ZSH '
+source $ZSH/oh-my-zsh.sh
+omz update
+```
 
 ## Update The Terminal
 Ever since apple switched the default shell to zsh instead of bash, I found it's unnecessary to install iTerm/iTerm2. The terminal naturally defaults to the zsh shell, but if you want to switch to bash, there are plenty of articles on google that show you how. I like zsh, so we'll run with it. 
@@ -117,6 +132,21 @@ It typically pulls paths from these guys (This is different if your shell is bas
 - ~/.zshrc
 - /etc/paths
 - /etc/paths.d  
-- /etc/profile 
+- /etc/profile
+- /etc/zprofile 
 
+Let's add homebrew to our path.
+There are different arguments that tell you where to put your PATH, and you'll see arguments for and against all of them. These are the most common locations you'll see: 
+- .zshenv
+- - .zshenv is always sourced. It often contains exported variables that should be available to other programs. For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you can set $ZDOTDIR in .zshenv to specify an alternative location for the rest of your zsh configuration.
+- .zprofile
+- .zshrc
+- .zlogin
 
+If you want to see all the arguments, feel free to google. For now, I'm just putting the path into my .zshrc file. 
+To add it to your ~/.zshrc file
+
+```
+vim ~/.zshrc
+```
+and add " export PATH=/opt/homebrew/bin:$PATH " to the section that mentions your path (typically the first section) of the zshrc file. 
