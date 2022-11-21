@@ -138,15 +138,22 @@ It typically pulls paths from these guys (This is different if your shell is bas
 Let's add homebrew to our path.
 There are different arguments that tell you where to put your PATH, and you'll see arguments for and against all of them. These are the most common locations you'll see: 
 - .zshenv
-- - .zshenv is always sourced. It often contains exported variables that should be available to other programs. For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you can set $ZDOTDIR in .zshenv to specify an alternative location for the rest of your zsh configuration.
+ - .zshenv is always sourced first. It often contains exported variables that should be available to other programs. For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you can set $ZDOTDIR in .zshenv to specify an alternative location for the rest of your zsh configuration. Be aware when setting $PATH in .zshenv, various other files all are sourced after this file that will override this value
 - .zprofile
+ - .zprofile is for login shells. It is basically the same as .zlogin except that it's sourced before .zshrc whereas .zlogin is sourced after .zshrc. According to the zsh documentation, ".zprofile is meant as an alternative to .zlogin for ksh fans; the two are not intended to be used together, although this could certainly be done if desired."
 - .zshrc
+ - .zshrc is for interactive shells. You set options for the interactive shell there with the setopt and unsetopt commands. You can also load shell modules, set your history options, change your prompt, set up zle and completion, et cetera. You also set any variables that are only used in the interactive shell (e.g. $LS_COLORS)
 - .zlogin
+ - .zlogin is for login shells. It is sourced on the start of a login shell but after .zshrc, if the shell is also interactive. This file is often used to start X using startx. Some systems start X on boot, so this file is not always very useful.
+- .zlogout
+ - .zlogout is sometimes used to clear and reset the terminal. It is called when exiting, not when opening.   
 
-If you want to see all the arguments, feel free to google. For now, I'm just putting the path into my .zshrc file. 
+If you want to see all the arguments, feel free to google. For myself, I'm just putting the path into my .zshrc file. 
 To add it to your ~/.zshrc file
 
 ```
 vim ~/.zshrc
 ```
 and add " export PATH=/opt/homebrew/bin:$PATH " to the section that mentions your path (typically the first section) of the zshrc file. 
+
+<img width="448" alt="image" src="https://user-images.githubusercontent.com/19870859/203116233-218d5012-16f1-4124-bd80-d2d42bcdfb78.png">
