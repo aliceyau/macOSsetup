@@ -20,14 +20,6 @@ This is pretty specific for myself, however if it's helpful for you, feel free t
 - [Python](#python)
 - [Pip](#pip)
 - [Node.js](#nodejs)
-- [Ruby](#ruby)
-- [Heroku](#heroku)
-- [PostgreSQL](#postgresql)
-- [Redis](#redis)
-- [Elasticsearch](#elasticsearch)
-- [Projects folder](#projects-folder)
-- [Apps](#apps)
-- Update the Terminal
 
 ## Update Script
 First thing I do is automate any updating via a bash/zsh script, that I call "updateMe.sh"
